@@ -4,12 +4,13 @@ import "./globals.css";
 
 const jura = Jura({
   variable: "--font-jura",
+  subsets: ["latin"],
 });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${jura.variable}`}>
+      <body className={`lg:text-xl xl:text-2xl 2xl:text-3xl ${jura.variable}`}>
         <Navbar />
         {children}
       </body>
