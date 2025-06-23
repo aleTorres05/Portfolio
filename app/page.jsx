@@ -1,7 +1,21 @@
+import IntroCard from "@/components/IntroCard";
+import PortfolioCard from "@/components/PortfolioCard";
+import StackCard from "@/components/StackCard";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] min-h-screen">
-      <main className="flex flex-col gap-[32px]"></main>
+    <div className="flex flex-col h-screen">
+      <main className="grid grid-cols-12">
+        <div className="col-start-2 col-end-12 h-fit p-2">
+          <IntroCard />
+        </div>
+        <div className="col-start-1 col-end-12 h-[100%] md:h-[150px] mt-4  ">
+          <StackCard />
+        </div>
+        <div className="col-start-2 col-end-12 h-[100%] p-2">
+          <PortfolioCard />
+        </div>
+      </main>
     </div>
   );
 }
